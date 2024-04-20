@@ -1,0 +1,128 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap') */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+:root {
+    --main: hsl(158, 36%, 37%);
+    --back: hsl(30, 38%, 92%);
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background-color: var(--back);
+}
+
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.main>.card {
+    height: 430px;
+    width: min(70%, 600px);
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+}
+
+.main>.card>.part {
+    width: 50%;
+}
+
+.main>.card>.part>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main>.card>.part>.detail {
+    padding: 30px;
+}
+
+.main>.card>.part>.detail>h5 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.main>.card>.part>.detail>h1 {
+    color: var(--main);
+    font-family: "Fraunces", serif;
+    padding: 10px 0;
+}
+
+.main>.card>.part>.detail>p {
+    font-size: 14px;
+    padding: 5px 0;
+}
+
+.main>.card>.part>.detail>h1>span {
+    font-size: 10px;
+    padding: 0 4px;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: line-through;
+}
+
+.main>.card>.part>.detail>button {
+    background-color: var(--main);
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 0;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 8px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.main>.card>.part>.detail>button:hover {
+    cursor: pointer;
+    background-color: #184131;
+}
+
+.main>.card>.part>.detail>button>img {
+    padding: 0 12px;
+    height: 16px;
+}
+
+@media (max-width: 375px) {
+    .main>.card {
+        height: 90vh;
+        width: 98%;
+        margin: auto;
+        flex-direction: column;
+    }
+
+    .main>.card>.part{
+        width: 100%;
+    }
+    .main>.card>.part>img {
+        height: 200px;
+    }
+    .main>.card>.part>.detail>button {
+        padding: 11px 0;
+    }
+    
+.main>.card>.part>.detail>h1 {
+    font-size: 25px;
+}
+}
